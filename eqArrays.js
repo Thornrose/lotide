@@ -23,7 +23,7 @@ const eqArrays = function(array1, array2) {
 };
 
 // Test code
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // should pass
+// assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // should pass
 // assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // should fail
 // assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), false); // should fail
 // assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // should pass

@@ -22,31 +22,32 @@ const assertArraysEqual = function(array1, array2) {
 const middle = function(array) {
   const arrayMiddle = [];
   const midCount = array.length % 2 === 0 ? 2 : 1;
-  const midPoint = Math.ceil(array.length / 2);
+  const midPointIndex = Math.ceil(array.length / 2) - 1; // using ceil to round up - floor would round down and no longer work in all cases.
+  console.log(array.length / 2)
   if (array.length <= 2) {
     return arrayMiddle;
   }
-  
-  arrayMiddle.push(array[midPoint - 1]);
+
+  arrayMiddle.push(array[midPointIndex]);
   if (midCount === 2) {
-    arrayMiddle.push(array[midPoint]);
+    arrayMiddle.push(array[midPointIndex + 1]);
   }
   return arrayMiddle;
 }
 
-// pre-flight test code
-// middle([1, 2, 3, 4, 5]);
-// middle([1, 2, 3, 4]);
-// middle([1, 2, 3, 4, 5, 6]);
+// // pre-flight test code
+// // middle([1, 2, 3, 4, 5]);
+// // middle([1, 2, 3, 4]);
+// // middle([1, 2, 3, 4, 5, 6]);
 
-// test code - should all pass
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1, 2]), []);
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+// // test code - should all pass
+// assertArraysEqual(middle([1]), []);
+// assertArraysEqual(middle([1, 2]), []);
+// assertArraysEqual(middle([1, 2, 3]), [2]);
+// assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
+// assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+// assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
 
-// some fail tests
-assertArraysEqual(middle([1, 2]), [1]);
-assertArraysEqual(middle([2, 6, 2, 8]), [1, 2, 3, 4]);
+// // some fail tests
+// assertArraysEqual(middle([1, 2]), [1]);
+// assertArraysEqual(middle([2, 6, 2, 8]), [1, 2, 3, 4]);
