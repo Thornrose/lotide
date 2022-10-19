@@ -27,7 +27,7 @@ const without = function(source, itemsToRemove) {
   for (let item of itemsToRemove) {
     for (let i = 0; i < clippedArray.length; i++) {
       if (clippedArray[i] === item) {
-          clippedArray.splice(i, 1);
+          clippedArray.splice(i, 1); // splice would make new array anyway? came up in a study group
 
         }
       }
