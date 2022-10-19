@@ -23,7 +23,7 @@ const middle = function(array) {
   const arrayMiddle = [];
   const midCount = array.length % 2 === 0 ? 2 : 1;
   const midPointIndex = Math.ceil(array.length / 2) - 1; // using ceil to round up - floor would round down and no longer work in all cases.
-  console.log(array.length / 2)
+  console.log(array.length / 2);
   if (array.length <= 2) {
     return arrayMiddle;
   }
@@ -33,7 +33,7 @@ const middle = function(array) {
     arrayMiddle.push(array[midPointIndex + 1]);
   }
   return arrayMiddle;
-}
+};
 
 // // pre-flight test code
 // // middle([1, 2, 3, 4, 5]);
