@@ -21,5 +21,5 @@ const assertArraysEqual = function(array1, array2) {
 
 
 // light testing
-// assertArraysEqual([4, 5, 6], [3, 5, 8]);
-// assertArraysEqual([1], [1]);
+assertArraysEqual([4, 5, 6], [3, 5, 8]);
+assertArraysEqual([1], [1]);
