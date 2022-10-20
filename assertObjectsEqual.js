@@ -18,7 +18,7 @@ const eqObjects = function(obj1, obj2) {
   }
 
   for (let key of Object.keys(obj1)) {
-    if (Array.isArray(obj1[key])) {
+    if (obj1[key].isArray) {   // <-- for proper syntax, i think it's this way - but it also works as  "if (Array.isArray(obj1[key]))"
       if (!eqArrays(obj1[key], obj2[key])) {
         return false;
       }
