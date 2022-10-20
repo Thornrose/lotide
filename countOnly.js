@@ -1,4 +1,3 @@
-
 // "take in a collection of items (array of strings) and return counts for a specific subset (object)"
 // result is based on truthiness
 
