@@ -37,13 +37,13 @@ const letterPositions = function(sentence) {
       results[letter] = [];
     }
   }
-  for (i = 0; i < sentence.length; i++) {
+  for (let i = 0; i < sentence.length; i++) {
     results[sentence[i]].push(i);
   }
   return results;
 };
 
-testResult = letterPositions("hello");
+const testResult = letterPositions("hello");
 
 assertArraysEqual(testResult["h"], [0]);
 assertArraysEqual(testResult["e"], [1]);
