@@ -16,7 +16,7 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(sentence) {
   const letterCount = {};
 
-  for (letter of sentence) {
+  for (let letter of sentence) {
     if (letter !== " ") {
       if (letterCount[letter]) {
         letterCount[letter] += 1;
