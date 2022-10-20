@@ -18,15 +18,15 @@ const countLetters = function(sentence) {
 
   for (letter of sentence) {
     if (letter !== " ") {
-    if (letterCount[letter]) {
-      letterCount[letter] += 1;
-    } else {
-      letterCount[letter] = 1;
+      if (letterCount[letter]) {
+        letterCount[letter] += 1;
+      } else {
+        letterCount[letter] = 1;
+      }
     }
   }
-}
   return letterCount;
-}
+};
 
 console.log(countLetters("lighthouse in the house"));
 
