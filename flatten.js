@@ -40,4 +40,6 @@ const flatten = function(source) {
   return flatArray;
 };
 
+module.exports = flatten;
+
 assertArraysEqual(flatten([1, 2, [3, 4, [5]]]), [1, 2, 3, 4, 5]);

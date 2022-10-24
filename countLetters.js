@@ -28,6 +28,8 @@ const countLetters = function(sentence) {
   return letterCount;
 };
 
+module.exports = countLetters;
+
 console.log(countLetters("lighthouse in the house"));
 
 const testResult = countLetters("coffeepot coffee cup");

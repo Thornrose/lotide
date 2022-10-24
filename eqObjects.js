@@ -44,6 +44,8 @@ const eqObjects = function(obj1, obj2) {
   return true;
 };
 
+module.exports = eqObjects;
+
 // below is OLD - awkward wrong approach, at least not easy to edit into something that can handle arrays
 // had the right idea in some places, though
 

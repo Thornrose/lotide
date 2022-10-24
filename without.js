@@ -35,7 +35,7 @@ const without = function(source, itemsToRemove) {
   return clippedArray;
 }
 
-
+module.exports = without;
 
 // assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // should pass
 // assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // should pass

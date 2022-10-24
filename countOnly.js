@@ -33,6 +33,7 @@ const countOnly = function(allItems, itemsToCount) {
   return results;
 };
 
+module.exports = countOnly;
 //testing
 const firstNames = [
   "Karl",

@@ -27,6 +27,8 @@ const map = function(arr, cb) { // taking in two arguments, ARRay and CallBack. 
   return results;
 };
 
+module.exports = map;
+
 const words = ["what", "do", "you", "get", "when", "you", "fall", "in", "love"];
 const results1 = map(words, word => word[0]);
 
