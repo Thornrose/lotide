@@ -1,26 +1,39 @@
+const assert = require("chai").assert;
 const tail = require("../tail");
-const assertEqual = require("../assertEqual");
 
-// Test Case 1-3:
-const result0 = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result0.length, 2); // ensure we get back two elements
-assertEqual(result0[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result0[1], "Labs"); // ensure second element is "Labs"
+describe("#tail", () => {
 
-// Test Case 4-6:
-const result = tail([5, 7, 23]);
-assertEqual(result.length, 2);
-assertEqual(result[0], 7);
-assertEqual(result[1], 23);
+  it("should return two elements when given array of 3 elements", () => {
+    assert.lengthOf(tail(["Hello", "Lighthouse", "Labs"]), 2);
 
-// Test Case 7: original array not modified
-const numbers = ["four", "eight", "fifteen", "sixteen"];
-tail(numbers);
-assertEqual(numbers.length, 4);
+  });
 
-// Test Cases 8-9: array with one element, empty array
-const oneEleResult = tail(["solo"]);
-assertEqual(oneEleResult.length, 0);
+  it("should return old element[1] at element[0] and [2] at [1] when given array of 3 strings", () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
 
-const emptyResult = tail([]);
-assertEqual(emptyResult.length, 0);
+  });
+
+  it("should return old element[1] at element[0] and [2] at [1] when given array of 3 numbers", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+
+  });
+
+  it("should not modify the original array", () => {
+    const arr = [true, false, true];
+    const result = tail(arr);
+    assert.deepEqual(arr, [true, false, true]);
+
+  });
+
+  it("should return empty array when given array with only one element", () => {
+    assert.deepEqual(tail([1]), []);
+
+  });
+
+  it("should return empty array when given empty array", () => {
+    assert.deepEqual(tail([]), []);
+
+  });
+
+
+});
