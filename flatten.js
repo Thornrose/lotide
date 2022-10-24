@@ -28,8 +28,16 @@ const assertArraysEqual = function(array1, array2) {
 // output new array
 // tip: utilize .isArray() method
 
+const flatArray = [];
 const flatten = function(source) {
-  
-}
+  source.forEach((item) => {
+    if (Array.isArray(item)) {
+      flatten(item);
+    } else {
+    flatArray.push(item);
+    }
+  })
+  return flatArray;
+};
 
-
+assertArraysEqual(flatten([1, 2, [3, 4, [5]]]), [1, 2, 3, 4, 5]);
