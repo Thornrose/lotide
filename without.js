@@ -19,9 +19,9 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 // should return new array, not edit existing
-const without = function(source, itemsToRemove) {
+const without = function(array, itemsToRemove) {
   const clippedArray = [];
-  for (element of source) {
+  for (element of array) {
     clippedArray.push(element);
   }
   for (let item of itemsToRemove) {

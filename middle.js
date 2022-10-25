@@ -12,7 +12,6 @@ const middle = function(array) {
   if (midCount === 2) {
     arrayMiddle.push(array[midPointIndex + 1]);
   }
-
   return arrayMiddle;
 
 };

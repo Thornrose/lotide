@@ -19,10 +19,10 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 
-const map = function(arr, cb) { // taking in two arguments, ARRay and CallBack. Can try initializing with => to see if it works
+const map = function(array, callback) { // taking in two arguments, ARRay and CallBack. Can try initializing with => to see if it works
   const results = [];
-  for (let item of arr) {
-    results.push(cb(item));
+  for (let item of array) {
+    results.push(callback(item));
   }
   return results;
 };

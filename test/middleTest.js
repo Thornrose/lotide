@@ -11,11 +11,11 @@ describe("#middle", () => {
     assert.deepEqual(middle([1, 2]), []);
   });
 
-  it("should return one element when given array with odd number of elements", () => {
+  it("should return one middle element when given array with odd number of elements", () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]);
   });
 
-  it("should return two elements when given array with even number of elements", () => {
+  it("should return two middle elements when given array with even number of elements", () => {
     assert.deepEqual(middle(["one", "two", "three", "four", "five", "six"]), ["three", "four"]);
   });
   

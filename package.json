@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@thornrose/lotide",
   "version": "1.0.0",
-  "description": "LHL Lotide Project",
-  "main": "assertArraysEqual.js",
+  "description": "LHL Lotide Library Project",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Thornrose/lotide.git"
   },
-  "author": "",
+  "author": "Cheever Esler <ames.esler@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Thornrose/lotide/issues"

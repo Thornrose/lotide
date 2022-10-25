@@ -11,9 +11,9 @@ const assertEqual = function(actual, expected) {
 // go through keys using variable, checking values.
 // when you find the value you're looking for, return the actual name of the key.
 
-const findKeyByValue = function(sourceObj, goalVal) {
-  for (let key in sourceObj) {
-    if (sourceObj[key] === goalVal) {
+const findKeyByValue = function(object, keyValue) {
+  for (let key in object) {
+    if (object[key] === keyValue) {
       return key;
     }
   }

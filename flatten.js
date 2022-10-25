@@ -29,8 +29,8 @@ const assertArraysEqual = function(array1, array2) {
 // tip: utilize .isArray() method
 
 const flatArray = [];
-const flatten = function(source) {
-  source.forEach((item) => {
+const flatten = function(array) {
+  array.forEach((item) => {
     if (Array.isArray(item)) {
       flatten(item);
     } else {
