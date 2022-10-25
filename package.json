@@ -1,7 +1,7 @@
 {
   "name": "@thornrose/lotide",
   "version": "1.0.0",
-  "description": "LHL Lotide Library Project",
+  "description": "lhl lotide library project",
   "main": "index.js",
   "directories": {
     "test": "test"
